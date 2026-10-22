@@ -66,7 +66,7 @@ def get_news(city: str) -> str:
         snippet = r.get("content", "")
         
         news_list.append(
-            f"- {title}\n  🔗 {url}\n  📝 {snippet[:100]}..."
+            f"- {title}\n  {url}\n {snippet[:100]}..."
         )
     
     return f"Latest news in {city}:\n\n" + "\n\n".join(news_list)
